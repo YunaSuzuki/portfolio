@@ -1,5 +1,14 @@
 @import "compass";
 
+@mixin fontsize($size: 24) {
+  font-size: $size + px;
+  font-size: ($size / 10) * 1rem;
+}
+
+$pc-size: "(min-width: 1025px)";
+$tb-size: "(min-width: 600px) and (max-width: 1024px)";
+$sp-size: "(max-width: 599px)";
+
 *{
   box-sizing: border-box;
 }
@@ -12,6 +21,10 @@ body{
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+  
+  a:link, a:visited, a:active, a:hover{
+    text-decoration: none;
   }
 }
 
@@ -28,10 +41,10 @@ body{
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 75%;
-  height: 75%;
+  width: 85%;
+  height: 85%;
   
-  @media(max-width: 599px){
+  @media #{$sp-size}{
     height: 75%;
     max-height: 900px;
   }
@@ -43,34 +56,34 @@ body{
     background-color: #fff;
     border-radius: 20px;
     
-    @media(min-width: 1025px){
+    @media #{$pc-size}{
       padding-top: 50%;
       border: solid #000 15px;
     }
     
-    @media(min-width: 600px) and (max-width: 1024px){
+    @media #{$tb-size}{
       padding-top: 130%;
       border: solid #000 20px;
     }
     
-    @media(max-width: 599px){
+    @media #{$sp-size}{
       padding-top: 180%;
       border: solid #000 10px;
     }
   }
   
   .lower-display{
-    @media(max-width: 1025px){
+    @media (max-width: 1024px){
       display: none;
     }
     
     width: 100%;
-    height: 7%;
+    height: 6%;
     background-color: #C3C1C1;
     border-radius: 8px;
     
     &__square{
-      width: 100px;
+      width: 120px;
       height: 10px;
       margin: 0 auto;
       background-color: gray;
@@ -80,6 +93,75 @@ body{
 
 .display{
   //display自体のcssはwrap-displayの中に書く
+  
+  //index.html
+  .search{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin:  auto;
+    width: 70%;
+    text-align: center;
+    
+    &__title{
+      display: flex;
+      justify-content: center;
+      font-family: 'HiraMinPro-W6';
+      @include fontsize(30);
+      
+      @media(max-width: 599px){
+        @include fontsize(25);
+      }
+      
+      .blue-text{
+        color: blue;
+      }
+      
+      .red-text{
+        color: red;
+      }
+      
+      .yellow-text{
+        color: #F2D91C;
+      }
+      
+      .green-text{
+        color: green;
+      }
+    }
+    
+    &__input{
+      height: 50px;
+      width: 100%;
+      padding: 0 10px;
+      border-radius: 5px;
+      @include fontsize(15);
+      font-family: "fontawesome";
+      
+      &::placeholder{
+        text-align: right;
+      }
+    }
+    
+    &__menu{
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+      border: 1px solid #eeeeee;
+      border-radius: 10px;
+      box-shadow: 2px 2px 2px gray;
+      
+      a{
+        display: block;
+        margin: 7px 0;
+        text-align: left;
+        color: #52178C;
+      }
+    }
+  }
+  
   .contents-box{
     position: absolute;
     height: 97%;
@@ -92,7 +174,7 @@ body{
       width: 100%;
       overflow: scroll;
       
-      @media(min-width: 1025px){
+      @media #{$pc-size}{
         height: 87%;
       }
       
@@ -102,7 +184,7 @@ body{
     }
     
     .icons-bar{
-      @media(max-width: 1024px){
+      @media  (max-width: 1024px){
         display: none;
       }
       display: flex;
