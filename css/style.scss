@@ -79,14 +79,17 @@ body{
     
     width: 100%;
     height: 6%;
-    background-color: #C3C1C1;
+    background: -moz-linear-gradient(top left, #ccc, #424242); 
+    background: -webkit-linear-gradient(top left, #ccc, #424242); 
+    background: linear-gradient(to bottom right, #ccc, #424242); 
     border-radius: 8px;
     
     &__square{
       width: 120px;
-      height: 10px;
+      height: 12px;
       margin: 0 auto;
-      background-color: gray;
+      background-color: #bfbfbf;
+      border-radius: 5px;
     }
   }
 }
@@ -94,15 +97,27 @@ body{
 .display{
   //display自体のcssはwrap-displayの中に書く
   
+  //共通のdisplay-box
+  .display-box{
+    position: absolute;
+    height: 97%;
+    width: 97%;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    margin: auto;
+  }
+  
   //index.html
-  .search{
+  #search{
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    margin:  auto;
+    margin: auto;
     width: 70%;
+    height: 60%;
     text-align: center;
     
     &__title{
@@ -146,6 +161,7 @@ body{
     }
     
     &__menu{
+      display: none;
       width: 100%;
       margin: 0 auto;
       padding: 10px;
@@ -153,21 +169,45 @@ body{
       border-radius: 10px;
       box-shadow: 2px 2px 2px gray;
       
-      a{
+      .search__menu__list{
         display: block;
-        margin: 7px 0;
+        margin: 10px 0;
         text-align: left;
-        color: #52178C;
+        color: #660099;
+        
+        &__detail{
+          margin-left: 10px;
+          color: #999;
+          -webkit-transform: scale(0.9);
+          @include fontsize(8);
+        }
       }
     }
+    
   }
   
-  .contents-box{
-    position: absolute;
-    height: 97%;
-    width: 97%;
-    top: 10px;
-    left: 10px;
+// profile.html
+  .display-box{
+    
+    .link-lists{
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      margin: 20px auto 0;
+      
+      @media(min-width: 1025px){
+        width: 60%;
+        @include fontsize(10);
+      }
+      @media(max-width: 1024px){
+        width: 90%;
+        @include fontsize(8);
+      }
+      
+      .list-content{
+        color: #3433B7;
+      }
+    }
     
     
     .contents{
@@ -175,25 +215,25 @@ body{
       overflow: scroll;
       
       @media #{$pc-size}{
-        height: 87%;
+        height: 80%;
       }
       
       @media (max-width: 1024px){
-        height: 100%;
+        height: 90%;
       }
     }
     
-    .icons-bar{
+    ul.icons-bar{
       @media  (max-width: 1024px){
         display: none;
       }
       display: flex;
       position: absolute;
       bottom: 0;
-      height: 50px;
+      height: 10%;
       width: 100%;
-      
-      .icons-list{
+
+      li.icons-list{
         margin-left: 5px;
       }
       

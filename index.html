@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to my portfolio</title>
+    
+    <!--style-sheet-->
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <script src="js/main.js"></script>
+    
   </head>
   <body>
     <header></header>
@@ -14,23 +16,25 @@
       
       <div class="wrap-display">
         <div class="display">
-          <div class="contents-box">
-            <div class="search">
-              <ul class="search__title">
-                <li class="blue-text">S</li>
-                <li class="red-text">e</li>
-                <li class="yellow-text">a</li>
-                <li class="blue-text">r</li>
-                <li class="green-text">c</li>
-                <li class="red-text">h</li>
-              </ul>
-              <input class="search__input" type="text" name="search-box" placeholder="&#xf002" />
-              <div class="search__menu">
-                <a href="#">Profile</a>
-                <a href="#">Skill</a>
-                <a href="#">Works</a>
-                <a href="#">Contact</a>
-              </div>
+<!--ここから下を非同期通信で変更する-->
+          <div class="display-box" id="search">
+            <ul id="search__title">
+              <li class="blue-text">P</li>
+              <li class="red-text">o</li>
+              <li class="yellow-text">r</li>
+              <li class="blue-text">t</li>
+              <li class="green-text">f</li>
+              <li class="red-text">o</li>
+              <li class="yellow-text">l</li>
+              <li class="green-text">i</li>
+              <li class="red-text">o</li>
+            </ul>
+            <input id="search__input" type="text" name="search-box" placeholder="&#xf002" />
+            <div id="search__menu">
+              <span class="search__menu__list toPage" id="profile">Profile<i class="search__menu__list__detail">プロフィール</i></span>
+              <span class="search__menu__list toPage" id="skill">Skill<i class="search__menu__list__detail">言語や各レベルなど</i></span>
+              <span class="search__menu__list toPage" id="works">Works<i class="search__menu__list__detail">Web制作物</i></span>
+              <span class="search__menu__list toPage" id="contact">Contact<i class="search__menu__list__detail">お問い合わせ・SNSなど</i></span>
             </div>
           </div>
         </div>
@@ -40,6 +44,10 @@
       </div>
     </main>
     <footer></footer>
+    
+    <!--JSファイル-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
     
 </html>
