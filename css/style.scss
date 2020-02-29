@@ -273,9 +273,104 @@ body{
       height: 80%;
       
       @media (max-width: 1024px){
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
+        border: 1px solid #ccc;
+        
       }
+    }
+  }
+}
+
+//contact.html
+#contact{
+  
+  
+  span{
+    display: block;
+    text-align: center;
+  }
+  
+  input, select, button{
+    display: block;
+  }
+  
+  form{
+    
+    i{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  
+    input{
+      display: inline-block;
+      border-style: none;
+    }
+    
+    .form-box{
+      margin: 10px;
+      padding: 10px;
+      border: #ccc 1px solid;
+      border-radius: 2px;
+    }
+    
+    .cp_ipselect {
+    	overflow: hidden;
+    	width: 50%;
+    	margin: 10px;
+    	text-align: center;
+    }
+    .cp_ipselect select {
+    	width: 100%;
+    	padding-right: 1em;
+    	cursor: pointer;
+    	text-indent: 0.01px;
+    	text-overflow: ellipsis;
+    	border: none;
+    	outline: none;
+    	background: transparent;
+    	background-image: none;
+    	box-shadow: none;
+    	-webkit-appearance: none;
+    	appearance: none;
+    }
+    .cp_ipselect select::-ms-expand {
+        display: none;
+    }
+    .cp_ipselect.cp_sl01 {
+    	position: relative;
+    	border: 1px solid #bbbbbb;
+    	border-radius: 2px;
+    	background: #ffffff;
+    }
+    .cp_ipselect.cp_sl01::before {
+    	position: absolute;
+    	top: 0.8em;
+    	right: 0.9em;
+    	width: 0;
+    	height: 0;
+    	padding: 0;
+    	content: '';
+    	border-left: 6px solid transparent;
+    	border-right: 6px solid transparent;
+    	border-top: 6px solid #666666;
+    	pointer-events: none;
+    }
+    .cp_ipselect.cp_sl01 select {
+    	padding: 10px;
+    	color: #666666;
+    }
+    
+    .form-box__textarea{
+      height: 100px;
+      width: 95%;
+    }
+    
+    button{
+      margin: 10px auto;
+      padding: 10px 50px;
+      background-color: #3EAEC3;
+      border-style: none;
+      border-radius: 2px;
+      color: white;
     }
   }
 }
