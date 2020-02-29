@@ -1,9 +1,22 @@
+.centering, .wrap-display, .display .display-box, .display #search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
 * {
   box-sizing: border-box; }
 
 body {
-  margin: 0;
-  background-color: #EAFFFF; }
+  margin: 0; }
+  @media (min-width: 1025px) {
+    body {
+      background-color: #EAFFFF; } }
+  @media (max-width: 1024px) {
+    body {
+      background-color: #ffffff; } }
   body ul {
     margin: 0;
     padding: 0;
@@ -16,72 +29,93 @@ body {
   width: 100vw;
   height: 100vh; }
 
-.wrap-display {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 85%;
-  height: 85%; }
-  @media (max-width: 599px) {
-    .wrap-display {
-      height: 75%;
-      max-height: 900px; } }
-  .wrap-display .display {
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 20px; }
-    @media (min-width: 1025px) {
-      .wrap-display .display {
-        padding-top: 50%;
-        border: solid #000 15px; } }
-    @media (min-width: 600px) and (max-width: 1024px) {
-      .wrap-display .display {
-        padding-top: 130%;
-        border: solid #000 20px; } }
-    @media (max-width: 599px) {
-      .wrap-display .display {
-        padding-top: 180%;
-        border: solid #000 10px; } }
-  .wrap-display .lower-display {
+@media (min-width: 1025px) {
+  .wrap-display {
+    width: 85%;
+    height: 85%; } }
+@media (max-width: 1024px) {
+  .wrap-display {
+    height: 100%;
     width: 100%;
-    height: 6%;
-    background: -moz-linear-gradient(top left, #ccc, #424242);
-    background: -webkit-linear-gradient(top left, #ccc, #424242);
-    background: linear-gradient(to bottom right, #cccccc, #424242);
-    border-radius: 8px; }
-    @media (max-width: 1024px) {
-      .wrap-display .lower-display {
-        display: none; } }
-    .wrap-display .lower-display__square {
-      width: 120px;
-      height: 12px;
-      margin: 0 auto;
-      background-color: #bfbfbf;
-      border-radius: 5px; }
+    max-height: 900px; } }
+.wrap-display .display {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 25px; }
+  @media (min-width: 1025px) {
+    .wrap-display .display {
+      position: relative;
+      padding-top: 50%;
+      border: solid #000 15px; } }
+  @media (max-width: 1024px) {
+    .wrap-display .display {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh; } }
+.wrap-display .lower-display {
+  width: 100%;
+  height: 6%;
+  background: -moz-linear-gradient(top left, #ccc, #424242);
+  background: -webkit-linear-gradient(top left, #ccc, #424242);
+  background: linear-gradient(to bottom right, #cccccc, #424242);
+  border-radius: 8px; }
+  @media (max-width: 1024px) {
+    .wrap-display .lower-display {
+      display: none; } }
+  .wrap-display .lower-display__square {
+    width: 120px;
+    height: 12px;
+    margin: 0 auto;
+    background-color: #bfbfbf;
+    border-radius: 5px; }
 
 .display .display-box {
-  position: absolute;
-  height: 97%;
+  height: 100%;
   width: 97%;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  margin: auto; }
-.display #search {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 70%;
-  height: 60%;
+  padding: 0 10px;
   text-align: center; }
+  .display .display-box .icons-bar {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 2px gray;
+    border-radius: 20px;
+    width: 50%;
+    background: #fff; }
+    @media (min-width: 1025px) {
+      .display .display-box .icons-bar {
+        position: absolute; } }
+    @media (max-width: 1024px) {
+      .display .display-box .icons-bar {
+        position: fixed; } }
+    .display .display-box .icons-bar li.icons-list {
+      margin-right: 10px;
+      font-size: 25px;
+      font-size: 2.5rem; }
+      .display .display-box .icons-bar li.icons-list #twitter {
+        color: #29A4D9; }
+      .display .display-box .icons-bar li.icons-list #instagram {
+        background: -webkit-linear-gradient(0deg, #f13f79, #427eff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+      .display .display-box .icons-bar li.icons-list #fb {
+        color: #062894; }
+      .display .display-box .icons-bar li.icons-list #home {
+        color: #999999; }
+.display #search {
+  width: 70%;
+  height: 100%;
+  text-align: center; }
+  .display #search .search-box {
+    margin-top: 100px;
+    position: relative;
+    z-index: 100; }
   .display #search__title {
     display: flex;
     justify-content: center;
@@ -117,7 +151,9 @@ body {
     padding: 10px;
     border: 1px solid #eeeeee;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px gray; }
+    box-shadow: 2px 2px 2px gray;
+    z-index: 100;
+    background-color: #fff; }
     .display #search__menu .search__menu__list {
       display: block;
       margin: 10px 0;
@@ -134,40 +170,26 @@ body {
   justify-content: space-between;
   height: 50px;
   margin: 20px auto 0; }
-  @media (min-width: 1025px) {
+  @media (min-width: 600px) {
     .display .display-box .link-lists {
       width: 60%;
       font-size: 10px;
       font-size: 1rem; } }
-  @media (max-width: 1024px) {
+  @media (max-width: 599px) {
     .display .display-box .link-lists {
-      width: 90%;
+      width: 80%;
       font-size: 8px;
       font-size: 0.8rem; } }
   .display .display-box .link-lists .list-content {
     color: #3433B7; }
 .display .display-box .contents {
   width: 100%;
-  overflow: scroll; }
-  @media (min-width: 1025px) {
-    .display .display-box .contents {
-      height: 80%; } }
+  overflow: auto;
+  text-align: left;
+  height: 80%; }
   @media (max-width: 1024px) {
     .display .display-box .contents {
-      height: 90%; } }
-.display .display-box ul.icons-bar {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  height: 10%;
-  width: 100%; }
-  @media (max-width: 1024px) {
-    .display .display-box ul.icons-bar {
-      display: none; } }
-  .display .display-box ul.icons-bar li.icons-list {
-    margin-left: 5px; }
-  .display .display-box ul.icons-bar img {
-    width: 40px;
-    height: auto; }
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc; } }
 
 /*# sourceMappingURL=style.css.map */
