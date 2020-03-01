@@ -15,19 +15,19 @@ $(function() {
       console.log(page);
       
       switch (page) {
-        case 'profile':
+        case 'toProfile':
           url = 'profile.html';
           break;
         
-        case 'skill':
+        case 'toSkill':
           url = 'skill.html';
           break;
           
-        case 'works':
+        case 'toWorks':
           url = 'works.html';
           break;
           
-        case 'contact':
+        case 'toContact':
           url = 'contact.html';
           break;
       }
