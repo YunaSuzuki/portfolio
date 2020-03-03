@@ -6,10 +6,8 @@
     <title>Programming Skill</title>
     
     <!--style-sheet-->
-    <link rel="stylesheet" href="css/style.css" />
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    
-  </head>
+    <link rel="stylesheet" href="css/style.css" />
   <body>
     <header></header>
     <main class="wrapper">
@@ -25,37 +23,34 @@
               <li class="list-content toPage" id="toContact"><span>Contact</span></li>
             </ul>
             <div class="contents">
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
-              <p>これは本文です</p>
+              <div class="contents__box scroll-box" id="front-end">
+                <p class="subtitle">HTML・CSS・JavaScript</p>
+                <div class="description">
+                  動きのある見るひとを惹きつけるWebサイト制作
+                </div>
+                <img src="images/design.png" alt="design" class="contents__box__image fadein">
+              </div>
+              <div class="contents__box contents-right scroll-box">
+                <p class="subtitle">Ruby・Ruby on Rails</p>
+                <div class="description">
+                  Twitterなどの投稿アプリケーションなどの制作
+                </div>
+                <img src="images/coding.png" alt="coding" class="contents__box__image fadein">
+              </div>
+              <div class="contents__box adobe scroll-box">
+                <p class="subtitle">Photoshop・illustrator・XD</p>
+                <div class="description">
+                  Adobeソフトを使用して、画像編集・アイコン・バナー・ワイヤーフレームの作成
+                </div>
+                <img src="images/design.png" alt="design" class="contents__box__image fadein">
+              </div>
+              <div class="contents__box contents-right scroll-box">
+                <p class="subtitle">Movie</p>
+                <div class="description">
+                  Final Cut Pro, Primer Proを使用した動画編集
+                </div>
+                <img src="images/coding.png" alt="coding" class="contents__box__image fadein">
+              </div>
             </div>
             <ul class="icons-bar">
               <li class="icons-list"><i class="fab fa-twitter" id="twitter"></i></li>
@@ -74,6 +69,7 @@
     
     <!--JSファイル-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="jquery.waypoints.min.js"></script>
     <script src="js/main.js"></script>
   </body>
     

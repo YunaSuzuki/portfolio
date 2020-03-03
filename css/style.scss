@@ -59,7 +59,6 @@ body{
   @media (max-width: 1024px){
     height: 100%;
     width: 100%;
-    max-height: 900px;
   }
   
   .display{
@@ -114,6 +113,28 @@ body{
     width: 97%;
     padding: 0 10px;
     text-align: center;
+    
+    //共通ヘッダーリンク
+    .link-lists{
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      margin: 20px auto 0;
+      
+      @media(min-width: 600px){
+        width: 80%;
+        @include fontsize(10);
+      }
+      @media(max-width: 599px){
+        width: 80%;
+        @include fontsize(8);
+      }
+      
+      .list-content{
+        color: #3433B7;
+        cursor: default;
+      }
+    }
     
     //共通icon-bar
     .icons-bar{
@@ -244,51 +265,77 @@ body{
     
   }
   
+}
+
 // profile.html
-  .display-box{
-    
-    .link-lists{
-      display: flex;
-      justify-content: space-between;
-      height: 50px;
-      margin: 20px auto 0;
-      
-      @media(min-width: 600px){
-        width: 80%;
-        @include fontsize(10);
-      }
-      @media(max-width: 599px){
-        width: 80%;
-        @include fontsize(8);
-      }
-      
-      .list-content{
-        color: #3433B7;
-        cursor: default;
-      }
-    }
-    
-    .contents{
-      width: 100%;
-      overflow: auto;
-      text-align: left;
-      height: 68%;
-      
-      @media (max-width: 1024px){
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-      }
-    }
+.contents{
+  width: 100%;
+  overflow: auto;
+  text-align: left;
+  height: 68%;
+  
+  @media (max-width: 1024px){
+    height: 80%;
+    padding-top: 70%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
+}
+  
+  
+//skill.html
+.contents{
+  
+  .contents__box{
+    margin-bottom: 700px;
+    .subtitle{
+      font-family: serif;
+      font-weight: bold;
+      @include fontsize(12);
+    }
+    
+  }
+  
+  .scroll-box{
+    height: 500px;
+    padding-top: 300px;
+  }
+
+  .contents-right{
+    padding-right: 30px;
+    text-align: right;
+  }
+}
+  
+
+//workd.html
+.contents{
+  
+  .sample-site{
+    font-family: serif;
+    font-weight: bold;
+    @include fontsize(12);
+  }
+  
 }
 
 //contact.html
 #contact{
   overflow: auto;
+  border: none;
   
   @media(min-width: 1025px){
     width: 50%;
     margin: auto;
+  }
+  
+  @media(min-width: 600px) and (max-width: 1024px){
+    width: 70%;
+    margin: auto;
+  }
+  
+  @media(max-width: 1024px){
+    padding: 0;
   }
   
   span{
@@ -382,3 +429,16 @@ body{
     }
   }
 }
+
+.fadein{
+  opacity: 0;
+  transform: translate(0, 200px);
+  transition: all 2s;
+}
+
+.fadein.active{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
