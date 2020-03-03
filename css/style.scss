@@ -267,7 +267,7 @@ body{
   
 }
 
-// profile.html
+//共通
 .contents{
   width: 100%;
   overflow: auto;
@@ -280,22 +280,37 @@ body{
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
   }
-}
-  
-  
-//skill.html
-.contents{
   
   .contents__box{
     margin-bottom: 700px;
+    
     .subtitle{
       font-family: serif;
       font-weight: bold;
       @include fontsize(12);
     }
     
+    .fadein{
+      opacity: 0;
+      transform: translate(0, 200px);
+      transition: all 2s;
+    }
+    
+    .fadein.active{
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }
+}
+
+// profile.html
+.contents{
   
+}
+  
+  
+//skill.html
+.contents{
   .scroll-box{
     height: 500px;
     padding-top: 300px;
@@ -430,15 +445,5 @@ body{
   }
 }
 
-.fadein{
-  opacity: 0;
-  transform: translate(0, 200px);
-  transition: all 2s;
-}
-
-.fadein.active{
-  opacity: 1;
-  transform: translate(0, 0);
-}
 
 
