@@ -145,8 +145,6 @@ body{
       left: 0;
       margin: 0 auto;
       margin-bottom: 20px;
-      box-shadow: 1px 1px 2px gray;
-      border-radius: 20px;
       width: 50%;
       background: #fff;
       
@@ -160,24 +158,42 @@ body{
       
       li.icons-list{
         margin-right: 10px;
-        @include fontsize(25);
+        @include fontsize(22);
         
-        #twitter{
-          color: #29A4D9;
+        .icon-bg{
+          padding: 5px;
+          border-radius: 7px;
+        }
+        
+        .icon{
+          color: #fff;
+        }
+        
+        .twitter{
+          background-color: #29A4D9;
+        }
+        
+        .insta{
+          background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+          background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
         }
         
         #instagram{
-          background: -webkit-linear-gradient(0deg, #f13f79, #427eff);//背景色にグラデーションを指定
-          -webkit-background-clip: text;//テキストでくり抜く
-          -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+          margin: 0 2px;
+        }
+        
+        .facebook{
+          background-color: #062894;
         }
         
         #fb{
-          color: #062894;
+          width: 30px;
+          margin-right: 3px;
+          text-align: right;
         }
         
         #home{
-          color: #999999;
+          color: #152963;
         }
       }
     }
