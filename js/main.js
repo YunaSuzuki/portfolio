@@ -51,6 +51,7 @@ $(function() {
         imgFadeIn(get_html);
       }).fail(function(){
         console.log('失敗');
+        location.href = url;
       });
     });
 });
@@ -73,6 +74,11 @@ var imgFadeIn = (function(){
       }
     });
   });
+});
+
+//instagram 準備中アラート
+$(document).on('click', '#instagram', function() {
+      alert('ただいま、準備中です。');
 });
 
 
