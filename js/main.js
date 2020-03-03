@@ -47,7 +47,7 @@ $(function() {
         //飛ぶページのdisplay-boxを取得＆表示
         var get_html = $(data).find('.display-box');
         $('.display').append(get_html);
-        //ajax成功時に、画像のアニメーションができるように。
+        //ajax成功時に、画像のアニメーションができるように
         imgFadeIn(get_html);
       }).fail(function(){
         console.log('失敗');

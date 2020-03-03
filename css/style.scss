@@ -270,7 +270,7 @@ body{
 //共通
 .contents{
   width: 100%;
-  overflow: auto;
+  overflow-y: auto;
   text-align: left;
   height: 68%;
   
@@ -283,11 +283,16 @@ body{
   
   .contents__box{
     margin-bottom: 700px;
+    width: 100%;
     
     .subtitle{
       font-family: serif;
       font-weight: bold;
       @include fontsize(12);
+    }
+    
+    img{
+      width: 100%;
     }
     
     .fadein{
