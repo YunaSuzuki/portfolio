@@ -146,7 +146,7 @@ body{
       margin: 0 auto;
       margin-bottom: 20px;
       width: 50%;
-      background: #fff;
+      
       
       @media(min-width: 1025px){
         position: absolute;
@@ -297,18 +297,18 @@ body{
   width: 100%;
   overflow-y: auto;
   text-align: left;
-  height: 68%;
+  height: 80%;
+  scroll-snap-type: y mandatory;
   
   @media (max-width: 1024px){
     height: 80%;
-    padding-top: 70%;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
   }
   
   .contents__box{
-    margin-bottom: 700px;
     width: 100%;
+    scroll-snap-align: start;
     
     .subtitle{
       font-family: serif;
@@ -317,7 +317,9 @@ body{
     }
     
     img{
-      width: 100%;
+      @media(max-width: 599px){
+        width: 100%;
+      }
     }
     
     .fadein{
@@ -342,8 +344,8 @@ body{
 //skill.html
 .contents{
   .scroll-box{
-    height: 500px;
-    padding-top: 300px;
+    height: 100%;
+    margin: 300px 0;
   }
 
   .contents-right{

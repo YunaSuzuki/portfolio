@@ -64,12 +64,12 @@ var imgFadeIn = (function(){
     $('.contents__box').each(function(){
       
       var position = $(this).position().top;
-
+      console.log(position);
       if($('img', this).hasClass('active')){
         $('img', this).removeClass('active');
       }
       
-      if(position < 0){
+      if(position < 300){
         $('img', this).addClass('active');
       }
     });
