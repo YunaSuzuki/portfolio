@@ -325,13 +325,14 @@ body{
     .fadein{
       opacity: 0;
       transform: translate(0, 200px);
-      transition: all 2s;
+      transition: all 3s;
     }
     
     .fadein.active{
       opacity: 1;
       transform: translate(0, 0);
     }
+    
   }
 }
 
@@ -352,7 +353,6 @@ body{
 .contents{
   .scroll-box{
     height: 100%;
-    margin: 300px 0;
     padding-top: 20px;
   }
 

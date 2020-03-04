@@ -1,8 +1,12 @@
 /* global $ */
 
 //同期通信でページを読み込んだ場合、アニメーション登録
+
 $(window).on('load', function(){
+  
   imgFadeIn();
+  $('.first img').addClass('active');
+  
 });
 
 // index.html
@@ -47,10 +51,15 @@ $(function() {
         //飛ぶページのdisplay-boxを取得＆表示
         var get_html = $(data).find('.display-box');
         $('.display').append(get_html);
-        //ajax成功時に、画像のアニメーションができるように
+        //ajax成功時に、画像のアニメーション(スクロール）ができるように。
+        // firstSection(get_html);
         imgFadeIn(get_html);
+        //最初のセクションだけ読み込み時、フェードイン開始
+        $('img').on('load', function(){
+          console.log('imagedone');
+          $('.first img').addClass('active');
+        });
       }).fail(function(){
-        console.log('失敗');
         location.href = url;
       });
     });
@@ -60,11 +69,9 @@ $(function() {
 var imgFadeIn = (function(){
 
   $('.contents').scroll(function() {
-    
     $('.contents__box').each(function(){
       
       var position = $(this).position().top;
-      console.log(position);
       if($('img', this).hasClass('active')){
         $('img', this).removeClass('active');
       }
@@ -75,6 +82,7 @@ var imgFadeIn = (function(){
     });
   });
 });
+
 
 //instagram 準備中アラート
 $(document).on('click', '.alert-window', function() {
