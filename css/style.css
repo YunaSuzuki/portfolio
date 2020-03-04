@@ -227,9 +227,15 @@ body {
       opacity: 1;
       transform: translate(0, 0); }
 
+.contents .personal i {
+  color: #134e7f;
+  font-size: 18px;
+  font-size: 1.8rem; }
+
 .contents .scroll-box {
   height: 100%;
-  margin: 300px 0; }
+  margin: 300px 0;
+  padding-top: 20px; }
 .contents .contents-right {
   padding-right: 30px;
   text-align: right; }
@@ -259,67 +265,69 @@ body {
     text-align: center; }
   #contact input, #contact select, #contact button {
     display: block; }
-  #contact form i {
-    display: inline-block;
-    vertical-align: middle;
-    color: #3EAEC3; }
-  #contact form input {
-    display: inline-block;
-    border-style: none; }
-  #contact form .form-box {
-    margin: 10px 0;
-    padding: 10px;
-    border: #ccc 1px solid;
-    border-radius: 2px; }
-  #contact form .cp_ipselect {
-    overflow: hidden;
-    width: 100%;
-    margin: 10px 0;
-    text-align: center; }
-  #contact form .cp_ipselect select {
-    width: 100%;
-    padding-right: 1em;
-    cursor: pointer;
-    text-indent: 0.01px;
-    text-overflow: ellipsis;
-    border: none;
-    outline: none;
-    background: transparent;
-    background-image: none;
-    box-shadow: none;
-    -webkit-appearance: none;
-    appearance: none; }
-  #contact form .cp_ipselect select::-ms-expand {
-    display: none; }
-  #contact form .cp_ipselect.cp_sl01 {
-    position: relative;
-    border: 1px solid #bbbbbb;
-    border-radius: 2px;
-    background: #ffffff; }
-  #contact form .cp_ipselect.cp_sl01::before {
-    position: absolute;
-    top: 0.8em;
-    right: 0.9em;
-    width: 0;
-    height: 0;
-    padding: 0;
-    content: '';
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid #666666;
-    pointer-events: none; }
-  #contact form .cp_ipselect.cp_sl01 select {
-    padding: 10px;
-    color: #666666; }
-  #contact form .form-box__textarea {
-    height: 100px;
-    width: 95%; }
-  #contact form button {
-    margin: 10px auto;
-    padding: 10px 50px;
-    background-color: #3EAEC3;
-    border-style: none;
-    border-radius: 2px;
-    color: white; }
+  #contact form {
+    margin-top: 30px; }
+    #contact form i {
+      display: inline-block;
+      vertical-align: middle;
+      color: #134e7f; }
+    #contact form input {
+      display: inline-block;
+      border-style: none; }
+    #contact form .form-box {
+      margin: 10px 0;
+      padding: 10px;
+      border: #ccc 1px solid;
+      border-radius: 2px; }
+    #contact form .cp_ipselect {
+      overflow: hidden;
+      width: 100%;
+      margin: 10px 0;
+      text-align: center; }
+    #contact form .cp_ipselect select {
+      width: 100%;
+      padding-right: 1em;
+      cursor: pointer;
+      text-indent: 0.01px;
+      text-overflow: ellipsis;
+      border: none;
+      outline: none;
+      background: transparent;
+      background-image: none;
+      box-shadow: none;
+      -webkit-appearance: none;
+      appearance: none; }
+    #contact form .cp_ipselect select::-ms-expand {
+      display: none; }
+    #contact form .cp_ipselect.cp_sl01 {
+      position: relative;
+      border: 1px solid #bbbbbb;
+      border-radius: 2px;
+      background: #ffffff; }
+    #contact form .cp_ipselect.cp_sl01::before {
+      position: absolute;
+      top: 0.8em;
+      right: 0.9em;
+      width: 0;
+      height: 0;
+      padding: 0;
+      content: '';
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #666666;
+      pointer-events: none; }
+    #contact form .cp_ipselect.cp_sl01 select {
+      padding: 10px;
+      color: #666666; }
+    #contact form .form-box__textarea {
+      height: 100px;
+      width: 95%; }
+    #contact form button {
+      margin: 10px auto;
+      padding: 10px 50px;
+      background-color: #134e7f;
+      border-style: none;
+      border-radius: 2px;
+      color: white; }
 
 /*# sourceMappingURL=style.css.map */

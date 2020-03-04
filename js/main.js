@@ -77,7 +77,7 @@ var imgFadeIn = (function(){
 });
 
 //instagram 準備中アラート
-$(document).on('click', '#instagram', function() {
+$(document).on('click', '.alert-window', function() {
       alert('ただいま、準備中です。');
 });
 

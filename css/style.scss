@@ -338,6 +338,13 @@ body{
 // profile.html
 .contents{
   
+  .personal{
+    i{
+      color: #134e7f;
+      @include fontsize(18);
+    }
+  }
+  
 }
   
   
@@ -346,6 +353,7 @@ body{
   .scroll-box{
     height: 100%;
     margin: 300px 0;
+    padding-top: 20px;
   }
 
   .contents-right{
@@ -395,11 +403,12 @@ body{
   }
   
   form{
+    margin-top: 30px;
     
     i{
       display: inline-block;
       vertical-align: middle;
-      color: #3EAEC3;
+      color: #134e7f;
     }
   
     input{
@@ -469,7 +478,7 @@ body{
     button{
       margin: 10px auto;
       padding: 10px 50px;
-      background-color: #3EAEC3;
+      background-color: #134e7f;
       border-style: none;
       border-radius: 2px;
       color: white;
