@@ -169,6 +169,15 @@ body{
           color: #fff;
         }
         
+        .mail{
+          background-color: #018c99;
+          
+          #mail{
+            @include fontsize(20);
+            margin: 0 2px;
+          }
+        }
+        
         .twitter{
           background-color: #29A4D9;
         }

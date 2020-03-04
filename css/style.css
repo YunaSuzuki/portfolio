@@ -118,6 +118,12 @@ body {
         border-radius: 7px; }
       .display .display-box .icons-bar li.icons-list .icon {
         color: #fff; }
+      .display .display-box .icons-bar li.icons-list .mail {
+        background-color: #018c99; }
+        .display .display-box .icons-bar li.icons-list .mail #mail {
+          font-size: 20px;
+          font-size: 2rem;
+          margin: 0 2px; }
       .display .display-box .icons-bar li.icons-list .twitter {
         background-color: #29A4D9; }
       .display .display-box .icons-bar li.icons-list .insta {
