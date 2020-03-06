@@ -114,6 +114,19 @@ body{
     padding: 0 10px;
     text-align: center;
     
+    @media#{$pc-size}{
+      @include fontsize(10);
+    }
+    
+    @media#{$tb-size}{
+      @include fontsize(18);
+    }
+    
+    @media#{$sp-size}{
+      @include fontsize(10);
+    }
+    
+    
     //共通ヘッダーリンク
     .link-lists{
       display: flex;
@@ -123,11 +136,10 @@ body{
       
       @media(min-width: 600px){
         width: 80%;
-        @include fontsize(10);
       }
+      
       @media(max-width: 599px){
         width: 80%;
-        @include fontsize(8);
       }
       
       .list-content{
@@ -157,12 +169,10 @@ body{
       }
       
       li.icons-list{
-        margin-right: 10px;
-        @include fontsize(22);
-        
+        margin-left: 10px;
+
         .icon-bg{
-          padding: 5px;
-          border-radius: 7px;
+          border-radius: 10px;
         }
         
         .icon{
@@ -171,11 +181,6 @@ body{
         
         .mail{
           background-color: #018c99;
-          
-          #mail{
-            @include fontsize(20);
-            margin: 0 2px;
-          }
         }
         
         .twitter{
@@ -187,23 +192,70 @@ body{
           background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
         }
         
-        #instagram{
-          margin: 0 2px;
-        }
-        
         .facebook{
           background-color: #062894;
         }
         
         #fb{
-          width: 30px;
-          margin-right: 3px;
           text-align: right;
         }
         
         #home{
           color: #152963;
         }
+        
+        @media #{$pc-size}{
+          @include fontsize(22);
+          
+          .icon-bg{
+            padding: 5px;
+          }
+          
+          #instagram{
+            margin: 0 4px;
+          }
+          
+          #fb{
+            margin: 10px 5px 10px 10px;
+          }
+        }
+        
+        @media #{$tb-size}{
+          @include fontsize(40);
+          
+          #mail{
+            @include fontsize(40);
+          }
+          
+          .icon-bg{
+            padding: 10px;
+          }
+          
+          #instagram{
+            margin: 0 4px;
+          }
+          
+          #fb{
+            margin: 10px 5px 5px 30px ;
+          }
+        }
+        
+        @media #{$sp-size}{
+          @include fontsize(22);
+          
+          .icon-bg{
+            padding: 5px;
+          }
+          
+          #instagram{
+            margin: 0 4px;
+          }
+          
+          #fb{
+            margin: 10px 5px 10px 10px;
+          }
+        }
+        
       }
     }
   }
@@ -301,19 +353,34 @@ body{
   scroll-snap-type: y mandatory;
   
   @media (max-width: 1024px){
-    height: 80%;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+  }
+  
+  @media #{$tb-size}{
+    @include fontsize(20);
+    height: 90%;
   }
   
   .contents__box{
     width: 100%;
     scroll-snap-align: start;
     
+    .mask{
+      padding: 15px 15px 50px;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      
+      @media #{$tb-size}{
+        padding: 50px 25px;
+      }
+    }
+    
     .subtitle{
+      margin: 0;
       font-family: serif;
       font-weight: bold;
-      @include fontsize(12);
     }
     
     img{
@@ -339,6 +406,33 @@ body{
 // profile.html
 .contents{
   
+  #profile-bg{
+    @media #{$pc-size}{
+      background-image: url('../images/profile.png');
+    }
+    
+    @media (max-width: 1024px){
+      background-image: url("../images/profile-sptb.png");
+    }
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .subtitle{
+    @media #{$pc-size}{
+      @include fontsize(22);
+    }
+    
+    @media #{$tb-size}{
+      @include fontsize(25);
+    }
+    
+    @media #{$sp-size}{
+      @include fontsize(20);
+    }
+  }
+  
   .personal{
     i{
       color: #134e7f;
@@ -346,14 +440,84 @@ body{
     }
   }
   
+   table tbody tr td{
+      padding: 10px 5px 10px 0;
+      
+      @media #{$tb-size}{
+        padding: 20px 10px 20px 0;
+      }
+   }
+  
 }
   
   
 //skill.html
 .contents{
+  
+  #skill-frontend-bg{
+    @media #{$pc-size}{
+      background-image: url('../images/skill.png');
+    }
+    
+    @media (max-width: 1024px){
+      background-image: url("../images/skill-sptb.png");
+    }
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  #skill-webapp-bg{
+    @media #{$pc-size}{
+      background-image: url('../images/skill2.png');
+    }
+    
+    @media (max-width: 1024px){
+      background-image: url("../images/skill2-sptb.png");
+    }
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  #skill-etc-bg{
+    @media #{$pc-size}{
+      background-image: url('../images/skill3.png');
+    }
+    
+    @media (max-width: 1024px){
+      background-image: url("../images/skill3-sptb.png");
+    }
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  #skill-movie-bg{
+    @media #{$pc-size}{
+      background-image: url('../images/skill4.png');
+    }
+    
+    @media (max-width: 1024px){
+      background-image: url("../images/skill4-sptb.png");
+    }
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  
   .scroll-box{
     height: 100%;
-    padding-top: 20px;
+    background-image: url('../images/design.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .mask{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
   .contents-right{
@@ -363,8 +527,21 @@ body{
 }
   
 
-//workd.html
+//works.html
 .contents{
+  
+  #works-bg{
+    @media #{$pc-size}{
+      background-image: url('../images/works.png');
+    }
+    
+    @media (max-width: 1024px){
+      background-image: url("../images/works-sptb.png");
+    }
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   
   .sample-site{
     font-family: serif;
