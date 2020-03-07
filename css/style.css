@@ -350,6 +350,11 @@ body {
 .contents .contents-right {
   padding-right: 30px;
   text-align: right; }
+.contents .skill-table td {
+  padding-bottom: 0; }
+.contents .skill__icons {
+  height: 30px;
+  width: auto; }
 
 .contents #works-bg {
   background-size: cover;

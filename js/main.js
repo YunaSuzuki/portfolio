@@ -4,7 +4,7 @@
 
 $(window).on('load', function(){
   
-  textFadeIn();
+  sectionFadeIn();
   $('.contents__box .mask').children().hide().fadeIn(2000);
   imgFadeIn();
   
@@ -54,7 +54,7 @@ $(function() {
         $('.display').append(get_html);
         $('.contents__box .mask').children().hide().fadeIn(500);
         //ajax成功時に、画像のアニメーション(スクロール）ができるように。
-        textFadeIn(get_html);
+        sectionFadeIn(get_html);
         imgFadeIn();
       }).fail(function(){
         location.href = url;
@@ -63,17 +63,19 @@ $(function() {
 });
 
 //テキストフェードインアニメーション
-var textFadeIn = (function(){
+var sectionFadeIn = (function(){
   
   $('#contents').scroll(function() {
-    $('.scroll-box .mask').children().hide().fadeIn(1000);
+    
+    $('.fadein-text').hide().fadeIn(1000);
+    
     $('.contents__box').each(function(){
-      
       var position = $(this).position().top;
       if($('img', this).hasClass('active')){
         $('img', this).removeClass('active');
       }
       
+      console.log(position);
       if(position < 300){
         $('img', this).addClass('active');
       }
