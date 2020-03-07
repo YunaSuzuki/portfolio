@@ -51,7 +51,7 @@ $(function() {
         //飛ぶページのdisplay-boxを取得＆表示
         var get_html = $(data).find('.display-box');
         $('.display').append(get_html);
-        $('.contents__box .mask').children().hide().fadeIn(1000);
+        $('.contents__box .mask').children().hide().fadeIn(500);
         //ajax成功時に、画像のアニメーション(スクロール）ができるように。
         imgFadeIn(get_html);
         
