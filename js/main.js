@@ -4,8 +4,9 @@
 
 $(window).on('load', function(){
   
-  imgFadeIn();
+  textFadeIn();
   $('.contents__box .mask').children().hide().fadeIn(2000);
+  imgFadeIn();
   
 });
 
@@ -53,8 +54,8 @@ $(function() {
         $('.display').append(get_html);
         $('.contents__box .mask').children().hide().fadeIn(500);
         //ajax成功時に、画像のアニメーション(スクロール）ができるように。
-        imgFadeIn(get_html);
-        
+        textFadeIn(get_html);
+        imgFadeIn();
       }).fail(function(){
         location.href = url;
       });
@@ -62,10 +63,9 @@ $(function() {
 });
 
 //画像フェードインアニメーション
-var imgFadeIn = (function(){
+var textFadeIn = (function(){
   
   $('.contents').scroll(function() {
-    console.log('hi');
     $('.scroll-box .mask').children().hide().fadeIn(1000);
     $('.contents__box').each(function(){
       
@@ -80,6 +80,23 @@ var imgFadeIn = (function(){
     });
   });
 });
+
+//画像が下からフェードイン
+var imgFadeIn = (function(){
+  var section_html = $(document).find('section');
+  
+  $('img', section_html).each(function(){
+    
+    if($('img', section_html).hasClass('active')){
+      $('img', section_html).removeClass('active');
+    }
+    
+    $('img', section_html).addClass('active');
+  });
+  
+  
+});
+
 
 //instagram 準備中アラート
 $(document).on('click', '.alert-window', function() {
