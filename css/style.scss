@@ -345,12 +345,16 @@ body{
 }
 
 //共通
+#contents{
+  scroll-snap-type: y mandatory;
+}
+
 .contents{
   width: 100%;
   overflow-y: auto;
   text-align: left;
   height: 80%;
-  scroll-snap-type: y mandatory;
+  
   
   @media (max-width: 1024px){
     border-top: 1px solid #ccc;
@@ -407,6 +411,8 @@ body{
 .contents{
   
   #profile-bg{
+    height: auto;
+    
     @media #{$pc-size}{
       background-image: url('../images/profile.png');
     }
@@ -417,6 +423,7 @@ body{
     
     background-size: cover;
     background-repeat: no-repeat;
+    // background-attachment: fixed;
   }
   
   .subtitle{

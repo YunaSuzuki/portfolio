@@ -62,10 +62,10 @@ $(function() {
     });
 });
 
-//画像フェードインアニメーション
+//テキストフェードインアニメーション
 var textFadeIn = (function(){
   
-  $('.contents').scroll(function() {
+  $('#contents').scroll(function() {
     $('.scroll-box .mask').children().hide().fadeIn(1000);
     $('.contents__box').each(function(){
       

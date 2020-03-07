@@ -227,12 +227,14 @@ body {
         font-size: 8px;
         font-size: 0.8rem; }
 
+#contents {
+  scroll-snap-type: y mandatory; }
+
 .contents {
   width: 100%;
   overflow-y: auto;
   text-align: left;
-  height: 80%;
-  scroll-snap-type: y mandatory; }
+  height: 80%; }
   @media (max-width: 1024px) {
     .contents {
       border-top: 1px solid #ccc;
@@ -269,6 +271,7 @@ body {
       transform: translate(0, 0); }
 
 .contents #profile-bg {
+  height: auto;
   background-size: cover;
   background-repeat: no-repeat; }
   @media (min-width: 1025px) {
