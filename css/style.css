@@ -1,4 +1,4 @@
-.centering, .wrap-display, .display .display-box, .display #search {
+.centering, .wrap-display, .display .display-box, #search {
   position: absolute;
   top: 0;
   right: 0;
@@ -168,64 +168,6 @@ body {
             margin: 0 4px; }
           .display .display-box .icons-bar li.icons-list #fb {
             margin: 10px 5px 10px 10px; } }
-.display #search {
-  width: 70%;
-  height: 100%;
-  text-align: center; }
-  .display #search .search-box {
-    margin-top: 100px;
-    position: relative;
-    z-index: 100; }
-  .display #search__title {
-    display: flex;
-    justify-content: center;
-    font-family: 'HiraMinPro-W6';
-    font-size: 30px;
-    font-size: 3rem; }
-    @media (max-width: 599px) {
-      .display #search__title {
-        font-size: 25px;
-        font-size: 2.5rem; } }
-    .display #search__title .blue-text {
-      color: blue; }
-    .display #search__title .red-text {
-      color: red; }
-    .display #search__title .yellow-text {
-      color: #F2D91C; }
-    .display #search__title .green-text {
-      color: green; }
-  .display #search__input {
-    height: 50px;
-    width: 100%;
-    padding: 0 10px;
-    border-radius: 5px;
-    font-size: 15px;
-    font-size: 1.5rem;
-    font-family: "fontawesome"; }
-    .display #search__input::placeholder {
-      text-align: right; }
-  .display #search__menu {
-    display: none;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-    border: 1px solid #eeeeee;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px gray;
-    z-index: 100;
-    background-color: #fff;
-    cursor: default; }
-    .display #search__menu .search__menu__list {
-      display: block;
-      margin: 10px 0;
-      text-align: left;
-      color: #660099; }
-      .display #search__menu .search__menu__list__detail {
-        margin-left: 10px;
-        color: #999;
-        -webkit-transform: scale(0.9);
-        font-size: 8px;
-        font-size: 0.8rem; }
 
 #contents {
   scroll-snap-type: y mandatory; }
@@ -287,6 +229,79 @@ body {
   .section__icons {
     height: 30px;
     width: 30px; } }
+#search {
+  width: 70%;
+  height: 100%;
+  text-align: center; }
+  #search .search-box {
+    margin-top: 100px;
+    position: relative;
+    z-index: 100; }
+  #search__title {
+    display: flex;
+    justify-content: center;
+    font-family: 'HiraMinPro-W6';
+    font-size: 30px;
+    font-size: 3rem; }
+    @media (max-width: 599px) {
+      #search__title {
+        font-size: 25px;
+        font-size: 2.5rem; } }
+    #search__title .blue-text {
+      color: blue; }
+    #search__title .red-text {
+      color: red; }
+    #search__title .yellow-text {
+      color: #F2D91C; }
+    #search__title .green-text {
+      color: green; }
+  #search__input {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px;
+    border: solid 2px gray;
+    border-radius: 5px;
+    overflow: auto;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-family: "fontawesome"; }
+    #search__input #search__input__text {
+      margin: 0;
+      text-align: left;
+      line-height: 300%;
+      vertical-align: middle;
+      color: #aaa;
+      font-size: 10px;
+      font-size: 1rem; }
+    #search__input i {
+      text-align: right;
+      line-height: 200%;
+      color: #aaa; }
+  #search__menu {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
+    z-index: 100;
+    background-color: #fff;
+    cursor: default; }
+    #search__menu .search__menu__list {
+      display: block;
+      margin: 10px 0;
+      text-align: left;
+      color: #660099; }
+      #search__menu .search__menu__list__detail {
+        margin-left: 10px;
+        color: #999;
+        -webkit-transform: scale(0.9);
+        font-size: 8px;
+        font-size: 0.8rem; }
+
 .contents .personal i {
   color: #134e7f;
   font-size: 18px;

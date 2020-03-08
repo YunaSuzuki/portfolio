@@ -7,6 +7,7 @@ $(window).on('load', function(){
   sectionFadeIn();
   $('.contents__box').children().hide().fadeIn(2000);
   imgFadeIn();
+  typing('#search__input__text', 'click here !');
   
 });
 
@@ -108,6 +109,14 @@ var imgFadeIn = (function(){
 $(document).on('click', '.alert-window', function() {
       alert('ただいま、準備中です。');
 });
+
+const typing = (element, sentence) => {
+  [...sentence].forEach((character, index) => {
+    setTimeout(() => {
+      document.querySelector(element).textContent += character;
+    }, 100 * ++index);
+  });
+};
 
 
 // //フェードインアニメーション

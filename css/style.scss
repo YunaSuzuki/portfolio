@@ -259,89 +259,6 @@ body{
       }
     }
   }
-  
-  //index.html
-  #search{
-    @extend .centering;
-    width: 70%;
-    height: 100%;
-    text-align: center;
-    
-    .search-box{
-      margin-top: 100px;
-      position: relative;
-      z-index: 100;
-    }
-    
-    &__title{
-      display: flex;
-      justify-content: center;
-      font-family: 'HiraMinPro-W6';
-      @include fontsize(30);
-      
-      @media(max-width: 599px){
-        @include fontsize(25);
-      }
-      
-      .blue-text{
-        color: blue;
-      }
-      
-      .red-text{
-        color: red;
-      }
-      
-      .yellow-text{
-        color: #F2D91C;
-      }
-      
-      .green-text{
-        color: green;
-      }
-    }
-    
-    &__input{
-      height: 50px;
-      width: 100%;
-      padding: 0 10px;
-      border-radius: 5px;
-      @include fontsize(15);
-      font-family: "fontawesome";
-      
-      &::placeholder{
-        text-align: right;
-      }
-    }
-    
-    &__menu{
-      display: none;
-      width: 100%;
-      margin: 0 auto;
-      padding: 10px;
-      border: 1px solid #eeeeee;
-      border-radius: 10px;
-      box-shadow: 2px 2px 2px gray;
-      z-index: 100;
-      background-color: #fff;
-      cursor: default;
-      
-      .search__menu__list{
-        display: block;
-        margin: 10px 0;
-        text-align: left;
-        color: #660099;
-        
-        &__detail{
-          margin-left: 10px;
-          color: #999;
-          -webkit-transform: scale(0.9);
-          @include fontsize(8);
-        }
-      }
-    }
-    
-  }
-  
 }
 
 //共通
@@ -425,6 +342,105 @@ body{
     width: 30px;
   }
 }
+
+ //index.html
+  #search{
+    @extend .centering;
+    width: 70%;
+    height: 100%;
+    text-align: center;
+    
+    .search-box{
+      margin-top: 100px;
+      position: relative;
+      z-index: 100;
+    }
+    
+    &__title{
+      display: flex;
+      justify-content: center;
+      font-family: 'HiraMinPro-W6';
+      @include fontsize(30);
+      
+      @media(max-width: 599px){
+        @include fontsize(25);
+      }
+      
+      .blue-text{
+        color: blue;
+      }
+      
+      .red-text{
+        color: red;
+      }
+      
+      .yellow-text{
+        color: #F2D91C;
+      }
+      
+      .green-text{
+        color: green;
+      }
+    }
+    
+    &__input{
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      width: 100%;
+      padding: 0 10px;
+      border: solid 2px gray;
+      border-radius: 5px;
+      overflow: auto;
+      @include fontsize(15);
+      font-family: "fontawesome";
+      
+      #search__input__text{
+        margin: 0;
+        text-align: left;
+        line-height: 300%;
+        vertical-align: middle;
+        color: #aaa;
+        @include fontsize(10);
+      }
+     
+      
+      i{
+        text-align: right;
+        line-height: 200%;
+        color: #aaa;
+      }
+    }
+    
+    &__menu{
+      display: none;
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+      border: 1px solid #eeeeee;
+      border-radius: 10px;
+      box-shadow: 2px 2px 2px gray;
+      z-index: 100;
+      background-color: #fff;
+      cursor: default;
+      
+      .search__menu__list{
+        display: block;
+        margin: 10px 0;
+        text-align: left;
+        color: #660099;
+        
+        &__detail{
+          margin-left: 10px;
+          color: #999;
+          -webkit-transform: scale(0.9);
+          @include fontsize(8);
+        }
+      }
+    }
+    
+  }
+  
 
 // profile.html
 .contents{
