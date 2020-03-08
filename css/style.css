@@ -81,8 +81,8 @@ body {
       font-size: 1rem; } }
   @media (min-width: 600px) and (max-width: 1024px) {
     .display .display-box {
-      font-size: 18px;
-      font-size: 1.8rem; } }
+      font-size: 16px;
+      font-size: 1.6rem; } }
   @media (max-width: 599px) {
     .display .display-box {
       font-size: 10px;
@@ -183,8 +183,8 @@ body {
       border-bottom: 1px solid #ccc; } }
   @media (min-width: 600px) and (max-width: 1024px) {
     .contents {
-      font-size: 20px;
-      font-size: 2rem;
+      font-size: 16px;
+      font-size: 1.6rem;
       height: 90%; } }
   .contents .contents__box {
     width: 100%;
@@ -199,8 +199,8 @@ body {
           font-size: 1.8rem; } }
       @media (min-width: 600px) and (max-width: 1024px) {
         .contents .contents__box .subtitle {
-          font-size: 25px;
-          font-size: 2.5rem; } }
+          font-size: 20px;
+          font-size: 2rem; } }
       @media (max-width: 599px) {
         .contents .contents__box .subtitle {
           font-size: 16px;
@@ -261,7 +261,7 @@ body {
     height: 50px;
     width: 100%;
     padding: 0 10px;
-    border: solid 2px gray;
+    border: solid 1.5px gray;
     border-radius: 5px;
     overflow: auto;
     font-size: 15px;
@@ -290,6 +290,10 @@ body {
     z-index: 100;
     background-color: #fff;
     cursor: default; }
+    @media (min-width: 600px) and (max-width: 1024px) {
+      #search__menu {
+        font-size: 14px;
+        font-size: 1.4rem; } }
     #search__menu .search__menu__list {
       display: block;
       margin: 10px 0;
