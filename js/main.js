@@ -69,20 +69,25 @@ var sectionFadeIn = (function(){
     
     $('.fadein-text').hide().fadeIn(1000);
     
-    $('.contents__box').each(function(){
+    $('section').each(function(){
       var position = $(this).position().top;
       if($('img', this).hasClass('active')){
         $('img', this).removeClass('active');
       }
       
+      console.log(position);
       if(position < 300){
         $('img', this).addClass('active');
+        
+        if(position < -250){
+          $('img', this).removeClass('active');
+        }
       }
     });
   });
 });
 
-//画像が下からフェードイン
+//最初のsectionの画像が下からフェードイン
 var imgFadeIn = (function(){
   var section_html = $(document).find('.first-section');
   
