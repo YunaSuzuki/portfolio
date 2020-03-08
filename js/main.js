@@ -75,7 +75,6 @@ var sectionFadeIn = (function(){
         $('img', this).removeClass('active');
       }
       
-      console.log(position);
       if(position < 300){
         $('img', this).addClass('active');
       }
@@ -85,7 +84,7 @@ var sectionFadeIn = (function(){
 
 //画像が下からフェードイン
 var imgFadeIn = (function(){
-  var section_html = $(document).find('section');
+  var section_html = $(document).find('.first-section');
   
   $('img', section_html).each(function(){
     

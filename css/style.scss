@@ -493,19 +493,6 @@ body{
     background-repeat: no-repeat;
   }
   
-  #skill-movie-bg{
-    @media #{$pc-size}{
-      background-image: url('../images/skill4.png');
-    }
-    
-    @media (max-width: 1024px){
-      background-image: url("../images/skill4-sptb.png");
-    }
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
   
   .scroll-box{
     height: 100%;

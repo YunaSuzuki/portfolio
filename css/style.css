@@ -327,15 +327,6 @@ body {
   @media (max-width: 1024px) {
     .contents #skill-etc-bg {
       background-image: url("../images/skill3-sptb.png"); } }
-.contents #skill-movie-bg {
-  background-size: cover;
-  background-repeat: no-repeat; }
-  @media (min-width: 1025px) {
-    .contents #skill-movie-bg {
-      background-image: url("../images/skill4.png"); } }
-  @media (max-width: 1024px) {
-    .contents #skill-movie-bg {
-      background-image: url("../images/skill4-sptb.png"); } }
 .contents .scroll-box {
   height: 100%; }
 .contents .mask {
