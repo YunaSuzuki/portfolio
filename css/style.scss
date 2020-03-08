@@ -536,25 +536,19 @@ body{
 //works.html
 .contents{
   
-  #works-bg{
-    @media #{$pc-size}{
-      background-image: url('../images/works.png');
-    }
-    
-    @media (max-width: 1024px){
-      background-image: url("../images/works-sptb.png");
-    }
-    
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+#works-bg{
+  @media #{$pc-size}{
+    background-image: url('../images/works.png');
   }
   
-  .sample-site{
-    font-family: serif;
-    font-weight: bold;
-    @include fontsize(12);
+  @media (max-width: 1024px){
+    background-image: url("../images/works-sptb.png");
   }
   
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 //contact.html

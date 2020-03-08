@@ -354,20 +354,15 @@ body {
 .contents .skill-table td {
   padding-bottom: 0; }
 
-.contents #works-bg {
+#works-bg {
   background-size: cover;
   background-repeat: no-repeat; }
   @media (min-width: 1025px) {
-    .contents #works-bg {
+    #works-bg {
       background-image: url("../images/works.png"); } }
   @media (max-width: 1024px) {
-    .contents #works-bg {
+    #works-bg {
       background-image: url("../images/works-sptb.png"); } }
-.contents .sample-site {
-  font-family: serif;
-  font-weight: bold;
-  font-size: 12px;
-  font-size: 1.2rem; }
 
 #contact {
   overflow: auto;
