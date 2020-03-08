@@ -247,18 +247,22 @@ body {
   .contents .contents__box {
     width: 100%;
     scroll-snap-align: start; }
-    .contents .contents__box .mask {
-      padding: 15px 15px 50px;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.8); }
-      @media (min-width: 600px) and (max-width: 1024px) {
-        .contents .contents__box .mask {
-          padding: 50px 25px; } }
     .contents .contents__box .subtitle {
       margin: 0;
       font-family: serif;
       font-weight: bold; }
+      @media (min-width: 1025px) {
+        .contents .contents__box .subtitle {
+          font-size: 18px;
+          font-size: 1.8rem; } }
+      @media (min-width: 600px) and (max-width: 1024px) {
+        .contents .contents__box .subtitle {
+          font-size: 25px;
+          font-size: 2.5rem; } }
+      @media (max-width: 599px) {
+        .contents .contents__box .subtitle {
+          font-size: 16px;
+          font-size: 1.6rem; } }
     @media (max-width: 599px) {
       .contents .contents__box img {
         width: 100%; } }
@@ -270,28 +274,18 @@ body {
       opacity: 1;
       transform: translate(0, 0); }
 
-.contents #profile-bg {
-  height: auto;
-  background-size: cover;
-  background-repeat: no-repeat; }
-  @media (min-width: 1025px) {
-    .contents #profile-bg {
-      background-image: url("../images/profile.png"); } }
-  @media (max-width: 1024px) {
-    .contents #profile-bg {
-      background-image: url("../images/profile-sptb.png"); } }
+.mask {
+  padding: 15px 15px 50px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); }
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .mask {
+      padding: 50px 25px; } }
+
 @media (min-width: 1025px) {
-  .contents .subtitle {
-    font-size: 22px;
-    font-size: 2.2rem; } }
-@media (min-width: 600px) and (max-width: 1024px) {
-  .contents .subtitle {
-    font-size: 25px;
-    font-size: 2.5rem; } }
-@media (max-width: 599px) {
-  .contents .subtitle {
-    font-size: 18px;
-    font-size: 1.8rem; } }
+  .section__icons {
+    height: 30px;
+    width: 30px; } }
 .contents .personal i {
   color: #134e7f;
   font-size: 18px;
@@ -302,15 +296,18 @@ body {
     .contents table tbody tr td {
       padding: 20px 10px 20px 0; } }
 
-.contents #skill-frontend-bg {
+#profile-bg {
+  overflow-y: auto;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
   @media (min-width: 1025px) {
-    .contents #skill-frontend-bg {
-      background-image: url("../images/skill.png"); } }
+    #profile-bg {
+      background-image: url("../images/profile.png"); } }
   @media (max-width: 1024px) {
-    .contents #skill-frontend-bg {
-      background-image: url("../images/skill-sptb.png"); } }
+    #profile-bg {
+      background-image: url("../images/profile-sptb.png"); } }
+
 .contents #skill-webapp-bg {
   background-size: cover;
   background-repeat: no-repeat; }
@@ -339,10 +336,7 @@ body {
     .contents #skill-movie-bg {
       background-image: url("../images/skill4-sptb.png"); } }
 .contents .scroll-box {
-  height: 100%;
-  background-image: url("../images/design.png");
-  background-repeat: no-repeat;
-  background-size: cover; }
+  height: 100%; }
 .contents .mask {
   height: 100%;
   width: 100%;
@@ -352,9 +346,6 @@ body {
   text-align: right; }
 .contents .skill-table td {
   padding-bottom: 0; }
-.contents .skill__icons {
-  height: 30px;
-  width: auto; }
 
 .contents #works-bg {
   background-size: cover;

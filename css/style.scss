@@ -370,21 +370,22 @@ body{
     width: 100%;
     scroll-snap-align: start;
     
-    .mask{
-      padding: 15px 15px 50px;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
-      
-      @media #{$tb-size}{
-        padding: 50px 25px;
-      }
-    }
-    
     .subtitle{
       margin: 0;
       font-family: serif;
       font-weight: bold;
+      
+      @media #{$pc-size}{
+        @include fontsize(18);
+      }
+      
+      @media #{$tb-size}{
+        @include fontsize(25);
+      }
+      
+      @media #{$sp-size}{
+        @include fontsize(16);
+      }
     }
     
     img{
@@ -407,38 +408,25 @@ body{
   }
 }
 
+.mask{
+  padding: 15px 15px 50px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  
+  @media #{$tb-size}{
+    padding: 50px 25px;
+  }
+}
+
+@media #{$pc-size}{
+  .section__icons{
+    height: 30px;
+    width: 30px;
+  }
+}
+
 // profile.html
 .contents{
-  
-  #profile-bg{
-    height: auto;
-    
-    @media #{$pc-size}{
-      background-image: url('../images/profile.png');
-    }
-    
-    @media (max-width: 1024px){
-      background-image: url("../images/profile-sptb.png");
-    }
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-    // background-attachment: fixed;
-  }
-  
-  .subtitle{
-    @media #{$pc-size}{
-      @include fontsize(22);
-    }
-    
-    @media #{$tb-size}{
-      @include fontsize(25);
-    }
-    
-    @media #{$sp-size}{
-      @include fontsize(18);
-    }
-  }
   
   .personal{
     i{
@@ -447,7 +435,7 @@ body{
     }
   }
   
-   table tbody tr td{
+  table tbody tr td{
       padding: 10px 5px 10px 0;
       
       @media #{$tb-size}{
@@ -456,23 +444,27 @@ body{
    }
   
 }
+
+#profile-bg{
+  overflow-y: auto;
+  
+  @media #{$pc-size}{
+    background-image: url('../images/profile.png');
+  }
+  
+  @media (max-width: 1024px){
+    background-image: url("../images/profile-sptb.png");
+  }
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+  
   
   
 //skill.html
 .contents{
-  
-  #skill-frontend-bg{
-    @media #{$pc-size}{
-      background-image: url('../images/skill.png');
-    }
-    
-    @media (max-width: 1024px){
-      background-image: url("../images/skill-sptb.png");
-    }
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
   
   #skill-webapp-bg{
     @media #{$pc-size}{
@@ -516,9 +508,6 @@ body{
   
   .scroll-box{
     height: 100%;
-    background-image: url('../images/design.png');
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   
   .mask{
@@ -536,11 +525,6 @@ body{
     td{
       padding-bottom: 0;
     }
-  }
-  
-  .skill__icons{
-    height: 30px;
-    width: auto;
   }
 }
   
